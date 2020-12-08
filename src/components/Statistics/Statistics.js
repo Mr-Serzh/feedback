@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import s from './Statistics.module.css';
 
 export default function Statistics(props) {
@@ -14,6 +14,6 @@ export default function Statistics(props) {
   );
 }
 
-// Statistics.propTypes = {
-//   props: PropTypes.objectOf(PropTypes.number).isRequired,
-// };
+Statistics.propTypes = {
+  props: PropTypes.objectOf(PropTypes.number),
+};
