@@ -1,8 +1,13 @@
 import PropTypes from 'prop-types';
 import s from './Statistics.module.css';
 
-export default function Statistics(props) {
-  const { good, neutral, bad, total, positivePercentage } = props;
+export default function Statistics({
+  good,
+  neutral,
+  bad,
+  total,
+  positivePercentage,
+}) {
   return (
     <ul className={s.list}>
       <li className={s.item}>Good: {good}</li>

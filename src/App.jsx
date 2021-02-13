@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import Container from './components/Container/Container';
 import FeedbackCard from './components/FeedbackCard/FeedbackCard';
 import FeedbackOptions from './components/FeedbackOptions/FeedbackOptions';
@@ -28,6 +29,8 @@ class App extends Component {
   };
 
   render() {
+    const { good, neutral, bad } = this.state;
+
     return (
       <Container>
         <FeedbackCard>
@@ -42,9 +45,9 @@ class App extends Component {
               <Notification message="No one reported yet"></Notification>
             ) : (
               <Statistics
-                good={this.state.good}
-                neutral={this.state.neutral}
-                bad={this.state.bad}
+                good={good}
+                neutral={neutral}
+                bad={bad}
                 total={this.countTotalFeedback()}
                 positivePercentage={this.countPositiveFeedbackPercentage()}
               ></Statistics>
